@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="462.9166"
+   height="220.56372"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="fig_off_chip_memory.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="1"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.120175"
+     inkscape:cx="171.03729"
+     inkscape:cy="130.40781"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1176"
+     inkscape:window-x="1600"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:snap-global="true"
+     showguides="false"
+     fit-margin-top="5"
+     fit-margin-left="5"
+     fit-margin-right="5"
+     fit-margin-bottom="5"
+     inkscape:object-nodes="true"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       position="43.295898,270.37132"
+       orientation="120,0"
+       id="guide3873" />
+    <sodipodi:guide
+       position="39.295898,-41.128678"
+       orientation="0,382.5"
+       id="guide3875" />
+    <sodipodi:guide
+       position="456.91663,198.87133"
+       orientation="-120,0"
+       id="guide3877" />
+    <sodipodi:guide
+       position="421.79591,78.871322"
+       orientation="0,-382.5"
+       id="guide3879" />
+    <sodipodi:guide
+       position="39.295898,8.3713217"
+       orientation="0,382.5"
+       id="guide3212" />
+    <sodipodi:guide
+       position="43.295898,45.613802"
+       orientation="0,413.62073"
+       id="guide4319" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-83.704102,93.3302)">
+    <text
+       sodipodi:linespacing="125%"
+       id="text3234"
+       y="-78.137817"
+       x="126.00391"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         y="-78.137817"
+         x="126.00391"
+         id="tspan3236"
+         sodipodi:role="line">Tested core/uncore 0</tspan></text>
+    <g
+       id="g3339"
+       transform="translate(-6.3389154,96.55438)">
+      <circle
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         id="path3306"
+         transform="matrix(4.1052808e-8,1.7396379,-1.7396379,4.1052808e-8,403.3436,-532.12875)"
+         cx="310.06631"
+         cy="141.60864"
+         r="1.0606601" />
+      <circle
+         transform="matrix(4.1052808e-8,1.7396379,-1.7396379,4.1052808e-8,403.3436,-515.56915)"
+         id="path3308"
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         cx="310.06631"
+         cy="141.60864"
+         r="1.0606601" />
+      <circle
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         id="path3310"
+         transform="matrix(4.1052808e-8,1.7396379,-1.7396379,4.1052808e-8,403.3436,-523.84895)"
+         cx="310.06631"
+         cy="141.60864"
+         r="1.0606601" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:Sans;text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none"
+       x="535.55573"
+       y="-4.4985199"
+       id="text3207"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3209"
+         x="538.88385"
+         y="-4.4985199">Test <tspan
+   style="font-style:italic;line-height:125%;text-align:end;writing-mode:lr-tb;text-anchor:end"
+   id="tspan3066">M</tspan>  Test vector pair    Expected response    Response mask    Dictionary column </tspan></text>
+    <rect
+       ry="0"
+       rx="0"
+       y="-71.637817"
+       x="127"
+       height="70.5"
+       width="413.6207"
+       id="rect3213"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3215"
+       y="-59.637817"
+       x="535.55573"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:Sans;text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         y="-59.637817"
+         x="535.55573"
+         id="tspan3217"
+         sodipodi:role="line">Test 0   Test vector pair    Expected response    Response mask    Dictionary column</tspan></text>
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path3219"
+       d="m 127.00001,-57.13782 413.62072,0"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 127,-43.13782 413.62073,0"
+       id="path3221"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path3223"
+       d="m 127,-29.13781 413.62073,0"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 127,-15.13782 413.62073,0"
+       id="path3225"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path3227"
+       d="m 217.2636,-71.63782 0,70.5"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       sodipodi:nodetypes="cc"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 334.38809,-71.63782 0,70.5"
+       id="path3229"
+       inkscape:connector-curvature="0" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path3231"
+       d="m 433.25488,-71.63782 0,70.5"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <g
+       transform="translate(-44.682419,-164.1884)"
+       id="g3235">
+      <circle
+         r="1.0606601"
+         cy="141.60864"
+         cx="310.06631"
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         id="path3237"
+         transform="matrix(1.4166667,0,0,1.4166667,-128.75236,-58.561662)" />
+      <circle
+         r="1.0606601"
+         cy="141.60864"
+         cx="310.06631"
+         transform="matrix(1.4166667,0,0,1.4166667,-108.75236,-58.561662)"
+         id="path3239"
+         style="fill:#000000;fill-opacity:1;stroke:none" />
+      <circle
+         r="1.0606601"
+         cy="141.60864"
+         cx="310.06631"
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         id="path3241"
+         transform="matrix(1.4166667,0,0,1.4166667,-118.75236,-58.561662)" />
+    </g>
+    <g
+       id="g3243"
+       transform="translate(63.313217,-164.1884)">
+      <circle
+         r="1.0606601"
+         cy="141.60864"
+         cx="310.06631"
+         transform="matrix(1.4166667,0,0,1.4166667,-128.75236,-58.561662)"
+         id="path3245"
+         style="fill:#000000;fill-opacity:1;stroke:none" />
+      <circle
+         r="1.0606601"
+         cy="141.60864"
+         cx="310.06631"
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         id="path3247"
+         transform="matrix(1.4166667,0,0,1.4166667,-108.75236,-58.561662)" />
+      <circle
+         r="1.0606601"
+         cy="141.60864"
+         cx="310.06631"
+         transform="matrix(1.4166667,0,0,1.4166667,-118.75236,-58.561662)"
+         id="path3249"
+         style="fill:#000000;fill-opacity:1;stroke:none" />
+    </g>
+    <g
+       transform="translate(166.42955,-164.1884)"
+       id="g3251">
+      <circle
+         r="1.0606601"
+         cy="141.60864"
+         cx="310.06631"
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         id="path3253"
+         transform="matrix(1.4166667,0,0,1.4166667,-128.75236,-58.561662)" />
+      <circle
+         r="1.0606601"
+         cy="141.60864"
+         cx="310.06631"
+         transform="matrix(1.4166667,0,0,1.4166667,-108.75236,-58.561662)"
+         id="path3255"
+         style="fill:#000000;fill-opacity:1;stroke:none" />
+      <circle
+         r="1.0606601"
+         cy="141.60864"
+         cx="310.06631"
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         id="path3257"
+         transform="matrix(1.4166667,0,0,1.4166667,-118.75236,-58.561662)" />
+    </g>
+    <g
+       id="g3259"
+       transform="translate(-148.37646,-164.1884)">
+      <circle
+         r="1.0606601"
+         cy="141.60864"
+         cx="310.06631"
+         transform="matrix(1.4166667,0,0,1.4166667,-128.75236,-58.561662)"
+         id="path3261"
+         style="fill:#000000;fill-opacity:1;stroke:none" />
+      <circle
+         r="1.0606601"
+         cy="141.60864"
+         cx="310.06631"
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         id="path3263"
+         transform="matrix(1.4166667,0,0,1.4166667,-108.75236,-58.561662)" />
+      <circle
+         r="1.0606601"
+         cy="141.60864"
+         cx="310.06631"
+         transform="matrix(1.4166667,0,0,1.4166667,-118.75236,-58.561662)"
+         id="path3265"
+         style="fill:#000000;fill-opacity:1;stroke:none" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:Sans;text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none"
+       x="535.55573"
+       y="-45.844208"
+       id="text3267"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3269"
+         x="535.55573"
+         y="-45.844208">Test 1   Test vector pair    Expected response    Response mask    Dictionary column</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3271"
+       y="-32.050583"
+       x="535.55573"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:Sans;text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         y="-32.050583"
+         x="535.55573"
+         id="tspan3273"
+         sodipodi:role="line">Test 2   Test vector pair    Expected response    Response mask    Dictionary column</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       x="126.00391"
+       y="18.619724"
+       id="text4249"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4251"
+         x="126.00391"
+         y="18.619724">Tested core/uncore 1</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4253"
+       y="78.91848"
+       x="535.55573"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:Sans;text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         y="78.91848"
+         x="538.88385"
+         id="tspan4255"
+         sodipodi:role="line"
+         dx="0 0 0 0 0 0 0 0 1.0005403">Test <tspan
+   id="tspan4257"
+   style="font-style:italic;line-height:125%;text-align:end;writing-mode:lr-tb;text-anchor:end">N</tspan>  Test vector pair    Expected response    Response mask    Dictionary column </tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4259"
+       width="413.62073"
+       height="56.499992"
+       x="127"
+       y="25.119724"
+       rx="0"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:Sans;text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none"
+       x="535.55573"
+       y="37.119724"
+       id="text4261"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4263"
+         x="535.55573"
+         y="37.119724">Test 0   Test vector pair    Expected response    Response mask    Dictionary column</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 127.00001,39.61972 413.62072,0"
+       id="path4265"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path4267"
+       d="m 127,53.61972 413.62073,0"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 127,67.61973 413.62073,0"
+       id="path4269"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 217.2636,25.11972 0,56.499999"
+       id="path4273"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path4275"
+       d="m 334.38809,25.11972 0,56.499999"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 433.25488,25.11972 0,56.499999"
+       id="path4277"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <g
+       id="g4279"
+       transform="translate(-44.682419,-80.771396)">
+      <circle
+         transform="matrix(1.4166667,0,0,1.4166667,-128.75236,-58.561662)"
+         id="circle4281"
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         cx="310.06631"
+         cy="141.60864"
+         r="1.0606601" />
+      <circle
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         id="circle4283"
+         transform="matrix(1.4166667,0,0,1.4166667,-108.75236,-58.561662)"
+         cx="310.06631"
+         cy="141.60864"
+         r="1.0606601" />
+      <circle
+         transform="matrix(1.4166667,0,0,1.4166667,-118.75236,-58.561662)"
+         id="circle4285"
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         cx="310.06631"
+         cy="141.60864"
+         r="1.0606601" />
+    </g>
+    <g
+       transform="translate(63.313217,-80.771396)"
+       id="g4287">
+      <circle
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         id="circle4289"
+         transform="matrix(1.4166667,0,0,1.4166667,-128.75236,-58.561662)"
+         cx="310.06631"
+         cy="141.60864"
+         r="1.0606601" />
+      <circle
+         transform="matrix(1.4166667,0,0,1.4166667,-108.75236,-58.561662)"
+         id="circle4291"
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         cx="310.06631"
+         cy="141.60864"
+         r="1.0606601" />
+      <circle
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         id="circle4293"
+         transform="matrix(1.4166667,0,0,1.4166667,-118.75236,-58.561662)"
+         cx="310.06631"
+         cy="141.60864"
+         r="1.0606601" />
+    </g>
+    <g
+       id="g4295"
+       transform="translate(166.42955,-80.771396)">
+      <circle
+         transform="matrix(1.4166667,0,0,1.4166667,-128.75236,-58.561662)"
+         id="circle4297"
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         cx="310.06631"
+         cy="141.60864"
+         r="1.0606601" />
+      <circle
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         id="circle4299"
+         transform="matrix(1.4166667,0,0,1.4166667,-108.75236,-58.561662)"
+         cx="310.06631"
+         cy="141.60864"
+         r="1.0606601" />
+      <circle
+         transform="matrix(1.4166667,0,0,1.4166667,-118.75236,-58.561662)"
+         id="circle4301"
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         cx="310.06631"
+         cy="141.60864"
+         r="1.0606601" />
+    </g>
+    <g
+       transform="translate(-148.37646,-80.771396)"
+       id="g4303">
+      <circle
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         id="circle4305"
+         transform="matrix(1.4166667,0,0,1.4166667,-128.75236,-58.561662)"
+         cx="310.06631"
+         cy="141.60864"
+         r="1.0606601" />
+      <circle
+         transform="matrix(1.4166667,0,0,1.4166667,-108.75236,-58.561662)"
+         id="circle4307"
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         cx="310.06631"
+         cy="141.60864"
+         r="1.0606601" />
+      <circle
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         id="circle4309"
+         transform="matrix(1.4166667,0,0,1.4166667,-118.75236,-58.561662)"
+         cx="310.06631"
+         cy="141.60864"
+         r="1.0606601" />
+    </g>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4311"
+       y="50.91333"
+       x="535.55573"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:Sans;text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         y="50.91333"
+         x="535.55573"
+         id="tspan4313"
+         sodipodi:role="line">Test 1   Test vector pair    Expected response    Response mask    Dictionary column</tspan></text>
+  </g>
+</svg>

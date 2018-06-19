@@ -1,0 +1,213 @@
+\chapter{Conclusions}
+\label{chap:conclusions}
+
+Ensuring robustness of integrated circuits as fabrication technology continues to scale has been, and will continue to be, an important aspect in the advancement of computing systems.
+%
+The approach to ensuring robustness used here centers around periodic on-chip self-test and diagnosis.
+%
+First, a fault must be detected by high-quality test vectors loaded in from off-chip, applied to the core/uncore under test using the existing design-for-test (DFT) hardware.
+%
+Second, the test responses must be analyzed to localize the failure within the core/uncore.
+%
+Third, the affected portion of the system must be repaired, replaced, or avoided to ensure the system remains functional even when affected by one or more faults.
+%
+Finally, to ensure correctness in the ongoing computation, a recovery step may be necessary to recover the system state.
+%
+This is the approach presented in CASP (Concurrent Autonomous Chip Self-Test Using Stored Test Patterns)~\cite{li08, inoue08, li10casp, li13}.
+%
+CASP is assumed as a starting point for the work presented in this dissertation which is focused on diagnosis performed inside the chip.
+
+To perform failure diagnosis in an on-chip context requires an approach with minimal processing and storage requirements.
+%
+Fault diagnosis approaches are categorized as either effect-cause or cause-effect approaches.
+%
+In an effect-cause approach, diagnosis software will analyze the complete model of the circuit design, along with the complete test set and faulty circuit output, to reason about the structure of the circuit and how the observed faulty behavior could propagate through the circuit.
+%
+This requires signficant computational resources and is not suitable for on-chip diagnosis.
+%
+The other diagnosis approach is cause-effect, where fault simulation is used to hypothesize how a circuit would behave if affected by one of many modeled faults.
+%
+This builds a catalog of faulty circuit responses, called a fault dictionary.
+%
+This tabular data is easily compared against the observed faulty behavior, and modeled faults that match (or are close to matching) the actual failing-circuit response are identified as likely locations of the detected failure.
+%
+Unlike the complex software analysis required for effect-cause diagnosis, the use of a fault dictionary is very simple, requiring only very limited hardware or software support.
+
+The approach taken here in this dissertation is to construct and store a fault dictionary for use in on-chip diagnosis.
+%
+For the targeted early-life and wear-out failures, which manifest as gradually increasing delay through circuit gates, a flexible and generalized fault model such as TRAX is effective in capturing the uncertainty of delay.
+%
+In the specialized context of on-chip diagnosis, the limited storage space and relaxed diagnosis requirements mean that a compacted fault dictionary need only localize failures to the level of recovery, that is, to the level of repair, replacement, or avoidance.
+%
+This diagnostic relaxtion permits the dictionary to eliminate many faults that do not contribute to distinguishing intra-module faults, reducing the dictionary size.
+%
+The use of a hierarchical dictionary for on-chip diagnosis is performed by a scalable diagnosis architecure, designed to be a low-overhead addition to the CASP test system~\cite{li08}.
+%
+At the cost of less than 0.05\% chip area overhead for the OpenSPARC T2 processor design, the diagnosis architecture localizes any failures to the repair-level, enabling the repair, replacement, or avoidance of the core/uncore to ensure that the system remains robust.
+%
+The rest of this concluding chapter describes the dissertation contributions and directions for areas of future work.
+
+
+\section{Dissertation Contributions}
+\label{sec:conclusions_dissertation_contrib}
+
+The combination of the TRAX fault model, hierarchical fault dictionary, and on-chip diagnosis architecture results in a comprehensive methodology to efficiently diagnose failures to the required level of the design hierarchy.
+%
+A fast fault simulator greatly reduces the computation time needed to generate a TRAX fault dictionary, and the on-chip diagnosis process has been evaluated for suitability in diagnosing multiple concurrent failures.
+%
+The major contributions of this dissertation include:
+
+\textbf{TRAX Fault Model}
+\begin{itemize}
+\item{\textit{Activation and propagation rules:} Targeting the gradual gate slowdowns caused by early-life and wear-out failures, the TRAX fault model is designed to encompass all potential fault effects of a delay defect.
+%
+The TRAX fault model is similar to the unspecified-transition fault model~\cite{pomeranz08} but includes hazard activation in addition to conventional transition activation to ensure full subsumption of delay defects.
+%
+The \textit{X} value generated at fault activation conservatively prevents error masking that might occur with the TF model, resulting in a very conservative propagation of fault effects to circuit outputs.
+%
+The TRAX subsumption of TF faults is experimentally validated for a variety of circuits.}
+\item{\textit{GPU-accelerated fault simulation:} The incredible parallelism of graphics processing units (GPUs) is harnessed to provide an efficient fault simulation engine to accelerate the computationally demanding process of creating a fault dictionary.
+%
+Runtime comparisons with a leading commercial tool show an average speedup of nearly 8x (maximum of 19x) for the GPU accelerated TRAX fault simulator.}
+\item{\textit{Comparison of TRAX and TF fault effect subsumption:} To further explore and validate the TRAX subsumption of TF fault responses, we perform a series of circuit simulation experiments using several benchmark circuits.
+%
+For every selected fault site, TRAX and TF fault simulations are performed, and the simulated circuit outputs are compared between TRAX and TF.
+%
+For each fault analyzed in this way, the TRAX response subsumed the TF response in terms of the number of fault detections, confirming the ability of TRAX to fully-subsume the fault effect behavior of the transition fault model.}
+\end{itemize}
+
+\textbf{Hierarchical Fault Dictionary}
+\begin{itemize}
+\item{\textit{Exploitation of module-level hierarchy for relaxation of required diagnostic precision:} The recovery actions available to a faulty system-on-chip (SoC) at runtime, including repair, replacement, or avoidance of a defective module, are all quite granular in scope.
+%
+For example, it is not economically feasible to repair a single slowed transistor or swap out a spare gate for an un-damaged one.
+%
+Therefore, it is not necessary to distinguish between modeled faults belonging to the same repair-level module.
+%
+This permits additional dictionary compaction techniques, as well as enables the use of the on-chip diagnosis architecture to perform repair-level diagnosis.}
+\item{\textit{Hierarchical dictionary compaction through fault elimination via equivalence and subsumption:} Significant dictionary size reduction can be achieved by analyzing intra-module fault pairs and eliminating faults due to equivalence and subsumption.
+%
+Within a module, all-but-one test-set equivalent fault (those having identical simulation responses for all tests) can be eliminated.
+%
+Additionally, a fault with an erroneous test response wholly subsumed by another intra-module fault can be eliminated from the set of modeled faults.
+%
+Equivalence/subsumption fault elimination further compacts the fault dictionaries by an additional 92\% on average.}
+\item{\textit{Dictionary size reduction by up to four orders of magnitude:} Leveraging pass/fail compaction with equivalence and subsumption fault elimination can drastically reduce the storage size required for a fault dictionary.
+%
+This is especially valuable for on-chip diagnosis when all dictionary data must be stored off-chip in DRAM, flash, or on disk.
+%
+On average, the dictionary size is reduced by 99.37\% for UTF and reduced by 99.85\% for TRAX.
+%
+The maximum reduction for a UTF dictionary is the NCU dictionary, which is compacted down to only 0.003683\% of the original size, a reduction by over 27,000x.
+%
+This reduces the NCU fault dictionary from 211 GB for the full-response dictionary to under 8 MB for the UTF compacted pass/fail dictionary.}
+\end{itemize}
+
+\textbf{On-Chip Diagnosis Architecture}
+\begin{itemize}
+\item{\textit{TRAX on-chip diagnosis architecture:} A scalable, low-overhead diagnosis architecture has been designed to diagnose the pass/fail test responses of any faulty core/uncore.
+%
+Using hierarchical dictionary data loaded in from off-chip, the fault accumulator hardware iteratively searches for instances of Tester-Fail/Simulation-Pass (TFSP).
+%
+Each TFSP occurrence indicates a modeled fault that is not compatible with the observed test failures.
+%
+Once the set of candidate faults is determined, the Faulty Module Identification Circuit (FMIC) analyzes the candidate fault set to determine the per-module candidate fault counts, which are used to make decisions about how to recover the core/uncore.}
+\item{\textit{Tradeoffs in chip area and diagnosis time overhead:} The fault accumulator component of the on-chip diagnosis architecture is scalable in terms of the number of candidate faults under concurrent evaluation.
+%
+By scaling the number of concurrent faults handled in the fault accumulator, a tradeoff can be made between chip area overhead and cycles required for diagnosis.
+%
+For one of the largest circuits analyzed (the OpenSPARC T2 uncore ``NCU'', with 211 tests, 21,537 faults, and ten modules), diagnosis hardware requires approximately 26,000 cycles to perform diagnosis, and approximately 38,000 gates, an overhead of less than 0.0077\% for the OpenSPARC T2 design.}
+\item{\textit{Diagnosis of injected delay defects:} More than 32,000 delay-defect injection experiments are performed, across three circuits, to create realistic failing test responses to evaluate the on-chip diagnosis process.
+%
+Diagnosis results for these experiments are 100\% accurate, showing that the TRAX fault model subsumes all potential effects of a delay defect.
+%
+Further analysis shows promising results for UTFs, including improved diagnosis resolution at the expense of sub-perfect accuracy.
+%
+Normalization of per-module candidate defect counts also shows general improvement to diagnosis results for TRAX faults.}
+\end{itemize}
+
+\textbf{Multiple Defect Diagnosis}
+\begin{itemize}
+\item{\textit{Realistic defect-site selection for defect injection:} To provide the most realistic defect-injection experiments, the distribution of injected defects should reflect the distribution of the targeted defect types (namely, early-life and wear-out failures).
+%
+Three schemes are investigated and implemented, random-, locality-, and usage-based defect site selection.
+%
+Random defect selection provides a baseline for comparison, while locality-based defect selection uses a commercial place-and-route tool to preferentially select clusters of nearby defect sites, in an effort to emulate early-life and other defects caused by fabrication process variation.
+%
+Usage-based defect selection analyzes the transistor on-time characteristics to identify PMOS transistors most likely to be affected by wear-out (aging) defects such as Negative Bias Temperature Instability (NBTI).}
+\item{\textit{On-chip diagnosis of multiple injected defects:} Over 30,000 multiple-defect injection experiments are performed, using on-chip diagnosis to determine the most likely defective module(s).
+%
+Despite being designed to capture the misbehaviors of only a single delay defect, the TRAX fault model is effective in diagnosing multiple injected defects, typically achieving more than 90\% accuracy with reasonable resolution for two injected defects, with especially promising results for locality-based defect injection experiments.}
+\end{itemize}
+
+
+\section{Final Remarks}
+\label{sec:conclusions_concluding_remarks}
+
+Two major trends in the computing world include the continung scaling-down of chip features causing reduced reliability, and the increasing computerization of various domains including safety-critical systems such as autonomous vehicles and implantable medical devices.
+%
+Taken together, these trends contribute to an intense need for ensuring robust operation of such critical systems.
+%
+As we continue to put computers inside our bodies (medical devices), and put our bodies inside large mobile computers (modern vehicles, airliners, etc), ensuring robustness becomes one of the most-important system characteristics.
+
+Periodic on-chip test and diagnosis is a promising approach to ensure such robustness, by detecting failures as they occur (or are about to occur), localizing the failure to specific modules of the chip, and performing some sort of recovery operation.
+%
+The localization step is performed using on-chip diagnosis, requiring relatively little in the way of off-chip storage or diagnosis hardware.
+%
+The cause-effect dictionary diagnosis uses an efficient and scaleable fault diagnosis architecture to determine the faulty components of the design.
+
+As chips continue to become smaller and faster they end up being less naturally reliable.
+%
+With increased deployment of unreliable computing systems within safety-critical domains, it is hoped that the on-chip diagnosis technique at the core of this thesis can be extended and enhanced to provide robust operation.
+
+
+\section{Future Work}
+\label{sec:conclusions_future_work}
+
+This dissertation provides a comprehensive study of the use of on-chip diagnosis using a TRAX-based hierarchical fault dictionary for localizing early-life and wear-out failures.
+%
+Here, some possible future extensions and related topics are described.
+
+\begin{itemize}
+\item{\textit{Investigate tradeoffs in TRAX fault model variants:} While this dissertation investigated the difference between TRAX and UTF fault models, in terms of dictionary size and diagnostic abilities, there are other variants that might be interesting to investigate.
+%
+For example, the GPU-accelerated TRAX fault simulator generates a hazard \textit{H} value at a gate output if it detects a non-constant controlling value on at least one gate input.
+%
+This is implemented by detecting each possible hazard-generating input combination, for example for a two-input gate, the transitions 01 $\rightarrow$ 10 and 10 $\rightarrow$ 01 clearly have no constant controlling value inputs.
+%
+Further, what should the behavior be for input transitions like 0H $\rightarrow$ 10 or H0 $\rightarrow$ 0H?}
+\item{\textit{Investigate faults that fail most applied tests:} Some dictionary compaction experiments result in an astonishingly small dictionary, determined to be due to the presence of TRAX ``super faults'' that resulted in failing circuit outputs for most applied tests.
+%
+Further investigation showed that this is due to a combination of factors, most notably the presence of many hazard values in the affected circuits, coupled with circuits composed of predominantly XOR gates.
+%
+As shown in Figure~\ref{fig:trax_gate_evaluation} on page~\pageref{fig:trax_gate_evaluation}, any \textit{H} inputs to an XOR or XNOR gate will result in propagating that \textit{H} to the gate output (unless there is an \textit{X} input), which results in the activation of the gate output fault.
+%
+It could be investigated to determine if these ``super faults'' are present in many circuits or just the few affected circuits observed, and to determine if the hazard-generation conditions are too pessimistic, leading to such super faults.}
+\item{\textit{Further improve GPU-accelerated fault simulator:} While achieving nearly 8x speed-up on average, the GPU fault simulator is not as fast as it could be.
+%
+There are a variety of areas of improvement in the GPU programming that could be implemented with further investigation and research.
+%
+For example, some existing non-GPU fault simulators take advantage of wide math instructions (performing the same operation on multiple operands) to improve simulation speed, such as by using bitwise operators to perform 32 or 64 gate evaluations per thread of execution.
+%
+Another idea is to improve the alignment and cohesion of memory accesses across threads, as there are strict guidelines to follow to ensure maximum memory bus utilization.
+%
+Further investigation is warranted for the special-purpose memory types such as constants and texture memories, which may be especially well-suited for constant data such as the circuit netlist or gate evaluation lookup table.}
+\item{\textit{Usage-based defect injection workload:} The usage-based defect site selection used PMOS transistor ON-time data gathered by the GPU fault simulation, generated from random test vectors.
+%
+To increase the accuracy of the transistor-aging metric, it would be best to use a realistic workload instead of random tests.
+%
+Additionally, while the current set of aged PMOS transistors are selected based on static criteria (``turned on more than 70\% of test vectors''), a more realistic set of aged transistors could be obtained by also considering the position of each gate within the circuit, for example if it is part of a (near) critical path or on a path with plenty of timing slack.}
+\item{\textit{TRAX-aware test pattern generation:} The current approach uses conventional Automatic Test Pattern Generation (ATPG) targeting transition faults.
+%
+This results in a test set with high coverage of individual transition faults.
+%
+However, this is not the end goal of on-chip diagnosis.
+%
+While the hierarchical fault dictionary compaction process eliminates many modeled faults in the context of module-level diagnosis, it would likely be more effective to make all parts of this process aware of the overall diagnosis requirements (failure localization only to the level of repair, replacement, or avoidance).
+%
+Perhaps the ATPG process could be modified to prioritize test vectors that distinguish inter-module faults.}
+\item{\textit{Adaptive TRAX on-chip test and diagnosis:} The use of a static (but patchable) test set and fault dictionary requires that the selected core/uncore be tested with the entire test set, and run through the entire diagnosis process, even if the first $n$ tests unambiguously determine the defective module.
+%
+Modifying the CASP test architecture to incorporate the TRAX on-chip diagnosis architecture as part of a combined test+diagnosis process might enable adaptive test application, or provide for an early exit if the defective module becomes known before the end of the test set, potentially saving significant core/uncore downtime.}
+\end{itemize}
+

@@ -1,0 +1,50 @@
+%%% TITLEPAGE
+\input{titlepage}
+\pagenumbering{roman}
+
+%%% COPYRIGHT PAGE
+\begin{titlepage}
+\begin{center}
+\vspace*{\fill}
+Copyright \copyright~2017
+
+Matthew Layne Beckler
+
+All rights reserved
+\vspace*{\fill}
+\end{center}
+\end{titlepage}
+
+%%% ABSTRACT
+\pagenumbering{roman}
+
+\chapter*{Acknowledgments}
+\input{acknowledgments}
+
+\newpage
+
+\section*{Abstract}
+\input{abstract}
+
+\newpage
+
+\tableofcontents
+\listoftables
+\listoffigures
+\listofalgorithms
+\clearpage
+
+% If need a blank page get Page 1 to be left-handed.  Get rid of line and header,
+% make an empty page, go to next page, turn headers back on, continue.
+\renewcommand{\headrulewidth}{0pt}
+\fancyhf{}
+\mbox{}
+\newpage
+\pagestyle{fancy}
+\pagenumbering{arabic}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyhead[RE,LO]{\bf \thepage}
+\fancyhead[RO]{\bf \leftmark}
+\fancyhead[LE]{\bf \rightmark}
+\fancyfoot[C]{}
+

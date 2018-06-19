@@ -1,0 +1,33 @@
+Integrated Circuits (ICs) are an essential part of nearly every electronic device.
+%
+From toys to appliances, spacecraft to power plants, modern society truly depends on the reliable operation of billions of ICs around the world.
+%
+The steady shrinking of IC transistors over past decades has enabled drastic improvements in IC performance while reducing area and power consumption.
+%
+However, with continued scaling of semiconductor fabrication processes, failure sources of many types are becoming more pronounced and are increasingly affecting system operation.
+%
+Additionally, increasing variation during fabrication also increases the difficulty of yielding chips in a cost-effective manner.
+%
+Finally, phenomena such as early-life and wear-out failures pose new challenges to ensuring robustness.
+
+One approach for ensuring robustness centers on performing test during run-time, identifying the location of any defects, and repairing, replacing, or avoiding the affected portion of the system.
+%
+Leveraging the existing design-for-testability (DFT) structures, thorough tests that target these delay defects are applied using the scan logic.
+%
+Testing is performed periodically to minimize user-perceived performance loss, and if testing detects any failures, on-chip diagnosis is performed to localize the defect to the level of repair, replacement, or avoidance.
+
+In this dissertation, an on-chip diagnosis solution using a fault dictionary is described and validated through a large variety of experiments.
+%
+Conventional fault dictionary approaches can be used to locate failures but are limited to simplistic fail behaviors due to the significant computational resources required for dictionary generation and memory storage.
+%
+To capture the misbehaviors expected from scaled technologies, including early-life and wear-out failures, the Transition-X (TRAX) fault model is introduced.
+%
+Similar to a transition fault, a TRAX fault is activated by a signal level transition or glitch, and produces the unknown value \textit{X} when activated.
+%
+Recognizing that the limited options for runtime recovery of defective hardware relax the conventional requirements for defect localization, a new fault dictionary is developed to provide diagnosis localization only to the required level of the design hierarchy.
+%
+On-chip diagnosis using such a hierarchical dictionary is performed using a new scalable hardware architecture.
+%
+To reduce the computation time required to generate the TRAX hierarchical dictionary for large designs, the incredible parallelism of graphics processing units (GPUs) is harnessed to provide an efficient fault simulation engine for dictionary construction.
+%
+Finally, the on-chip diagnosis process is evaluated for suitability in providing accurate diagnosis results even when multiple concurrent defects are affecting a circuit.

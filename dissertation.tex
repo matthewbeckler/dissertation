@@ -1,0 +1,114 @@
+%%% DOCUMENTCLASS
+\documentclass[letterpaper,twoside,12pt]{report}
+\renewcommand{\rmdefault}{bch}
+
+%%% PACKAGES
+\usepackage{mdwlist}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{setspace}
+%\usepackage[normalsize]{subfigure} %[normalsize]
+\usepackage{booktabs}
+\usepackage{mathtools}
+\usepackage{times}
+\usepackage{multicol}
+\usepackage{multirow}
+
+\usepackage{caption}
+\usepackage[labelformat=simple]{subcaption}
+\renewcommand\thesubfigure{(\alph{subfigure})}
+%\captionsetup{subrefformat=parens}
+
+\PassOptionsToPackage{hyphens}{url}\usepackage[colorlinks=true, linkcolor=black, citecolor=black, pdftitle={On-Chip Diagnosis of Generalized Delay Failures using Compact Fault Dictionaries}, pdfauthor={Matthew Layne Beckler}, pdfsubject={}, pdfkeywords={}]{hyperref}
+\usepackage{breakurl}
+
+\usepackage{xspace}
+
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\renewcommand{\algorithmiccomment}[1]{// #1}
+
+\hyphenation{micro-archi-tecture}
+
+% another code listing package
+% http://stackoverflow.com/a/742012
+\lstset{
+language=C,
+basicstyle=\small\sffamily,
+numbers=left,
+numberstyle=\tiny,
+frame=tb,
+columns=fullflexible,
+showstringspaces=false
+}
+
+\newcommand{\sectionline}{
+    \nointerlineskip \vspace{\baselineskip}
+    \hspace{\fill}\rule{0.5\linewidth}{.7pt}\hspace{\fill}
+    \par\nointerlineskip \vspace{\baselineskip}
+}
+
+\graphicspath{{figures/}}
+\DeclareGraphicsExtensions{.pdf,.jpg,.jpeg,.png}
+
+
+% %%% SPACING
+\doublespacing
+%\onehalfspacing
+
+% %%% PAGE FORMAT
+\oddsidemargin 0.2in
+\evensidemargin 0.2in
+\topmargin 0.0in
+\headheight 15pt
+%\headheight 0.0in
+\textwidth  6in
+\textheight 9in
+\hoffset 0.0in
+%\voffset -.55in
+\voffset -.5in
+\footskip .25in
+
+% \hoffset .25in
+
+
+% %%% HEADERS & FOOTERS
+\pagestyle{fancy} % options: empty, plain, fancy
+\pagenumbering{arabic}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyhead[RE,LO]{\bf \thepage}
+\fancyhead[RO]{\bf \leftmark}
+\fancyhead[LE]{\bf \rightmark}
+\fancyfoot[C]{}
+
+\renewcommand{\sectionmark}[1]{ \markright{\thesection.\ \ #1}}
+\renewcommand{\chaptermark}[1]{ \markboth{\chaptername\ \thechapter.\ \ #1}{}}
+
+% allow align to break if it needs to
+%\allowdisplaybreaks[1]
+
+
+\begin{document}
+%\input{utils}
+
+\include{frontmatter}
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\include{chap-intro}
+\include{chap-trax}
+\include{chap-dict}
+\include{chap-diag}
+\include{chap-multi}
+\include{chap-conclusions}
+
+%\newpage
+%\pagestyle{plain}
+%TODO add bibliography to ToC like Cheng?
+\bibliographystyle{ieeetr}
+\bibliography{dissertation}
+
+\end{document}
